@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 50
+
+development:
+  <<: *default
+  database: chat_box_development
+
+test:
+  <<: *default
+  host: localhost
+  database: chat_box_test
+
+production:
+  <<: *default
+  database: chat_box_production
