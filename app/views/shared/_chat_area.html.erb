@@ -1,0 +1,10 @@
+<div class="chat_area">
+  <%= form_tag [:chats, :create], role: 'form', remote: true, method: :post do |f| %>
+  <div class="input-group">
+  <%= text_area_tag :message, nil, class: 'form-control custom-control', rows: 3, style: 'resize:none' %>
+    <span class="input-group-addon">
+      <%= submit_tag 'Send', class: 'btn btn-primary custom_send_button'%>
+    </span>
+  </div>
+  <% end %>
+</div>

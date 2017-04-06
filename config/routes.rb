@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post 'chats/create'
+
   post 'sessions/create'
 
   delete 'sessions/destroy'

@@ -1,0 +1,3 @@
+$('.chat_area form #message').val('');
+
+$('.chat_messages ul').append("<%= j render 'shared/chat_message', message: @chat_message, user: @user, time: @created_at %>")

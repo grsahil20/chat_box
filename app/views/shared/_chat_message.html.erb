@@ -1,0 +1,7 @@
+<% if user == current_user %>
+<li>
+    <%= user %> : <%= message %> : <%= time %>
+</li>
+<% else %>
+    <%= time %> : <%= message %> : <%= user %>
+<% end %>

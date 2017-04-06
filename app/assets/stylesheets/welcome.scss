@@ -11,12 +11,28 @@
   }
   .chat_area{
     height: 50px;
+    .input-group-addon{
+      padding: 0px;
+    }
+    .custom_send_button{
+    height: 72px;
+    width: 72px;
+    }
   }
   .chat_users{
-    height: 450px;
+    height: 490px;
+    h1{
+      text-align: center;
+      border-bottom: 1px solid #efefef;
+      background: #efefef;
+      margin-top: 0px;
+      padding: 16px;
+    }
   }
-  .chat_messages, .chat_area, .chat_users{
+  .chat_messages, .chat_users{
     border: 2px solid #efefef;
     border-radius: 2px;
   }
 }
+
+
