@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_dialect
-    @current_dialect ||= UserDialect.get_user_dialect(current_user)
+    @current_dialect ||= UserDialect::StorageService.get_user_dialect(current_user)
   end
   helper_method :current_dialect
 
