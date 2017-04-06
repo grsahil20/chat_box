@@ -52,3 +52,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+gem "private_pub"
+gem "thin"
+gem "redis"
+
