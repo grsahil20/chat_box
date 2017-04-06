@@ -8,6 +8,14 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  def current_dialect
+    @current_dialect ||= UserDialect.get_user_dialect(current_user)
+  end
+  helper_method :current_dialect
+
+  def online_users
+    UsersOnline.online_users
+  end
 
 end
 

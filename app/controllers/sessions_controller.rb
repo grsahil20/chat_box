@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
       flash[:error] = 'user_name & dialect is required'
     else
       UserDialect.set_user_dialect(params[:user_name], params[:dialect])
+      UsersOnline.set_user_online(params[:user_name])
       session[:user] = params[:user_name]
       flash[:notice] = 'welcome to chat box'
     end
