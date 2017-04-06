@@ -1,5 +1,7 @@
-<% if current_user %>
-    <%= render 'shared/chat_room' %>
-<% else %>
-    <%= render 'shared/welcome_user'%>
-<% end %>
+<div class="row margin_top_extra">
+  <% if current_user %>
+  <%= render 'shared/chat_room' %>
+  <% else %>
+  <%= render 'shared/welcome_user'%>
+  <% end %>
+</div>
