@@ -8,6 +8,13 @@
 .chat_container{
   .chat_messages{
     height: 400px;
+    h3{
+      text-align: center;
+      border-bottom: 1px solid #efefef;
+      background: #efefef;
+      margin-top: 0px;
+      padding: 16px;
+    }
   }
   .chat_area{
     height: 50px;
@@ -21,7 +28,7 @@
   }
   .chat_users{
     height: 490px;
-    h1{
+    h3{
       text-align: center;
       border-bottom: 1px solid #efefef;
       background: #efefef;
