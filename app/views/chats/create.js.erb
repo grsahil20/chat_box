@@ -1,5 +1,9 @@
 $('.chat_area form #message').val('');
 
 <% publish_to "/messages/new" do %>
-    $('.chat_messages ul').append("<%= j render 'shared/chat_message', message: @chat_message, user: @user, time: @created_at %>")
+if(current_user.name == '<%= current_user %>'){
+  $('.chat_messages ul').append("<%= j render 'shared/chat_message', message: @chat_message, user: @user, time: @created_at %>")
+} else {
+  $('.chat_messages ul').append("<%= j render 'shared/chat_message_inverse', message: @chat_message, user: @user, time: @created_at %>")
+}
 <% end %>

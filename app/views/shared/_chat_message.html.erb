@@ -1,7 +1,5 @@
-<% if user == current_user %>
 <li>
-    <%= user %> : <%= message %> : <%= time %>
+    <span  style="color:red"><%= user %></span>  :
+    <span  style="color:green"><%= message %></span>  :
+    <span  style="color:blue"><%= time %></span>
 </li>
-<% else %>
-    <%= time %> : <%= message %> : <%= user %>
-<% end %>
