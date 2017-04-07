@@ -8,7 +8,9 @@ class SessionsController < ApplicationController
       session[:user] = params[:user_name]
       flash[:notice] = 'welcome to chat box'
     end
-    redirect_to root_path
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy

@@ -1,10 +1,14 @@
 <div class="chat_users">
-<h3>Online Users</h3>
-<ul>
-  <% @online_users.each  do |online_user| %>
-  <li class="chat_user">
-    <%= link_to online_user, "#" %>
-  </li>
-  <% end %>
-</ul>
+  <h3>Online Users</h3>
+  <ul>
+    <li>
+    You
+    </li>
+    <% (@online_users - [current_user]).each  do |online_user| %>
+      <%= render 'shared/chat_user', online_user: online_user %>
+    <% end %>
+  </ul>
 </div>
+
+<%= subscribe_to "/users/new" %>
+<%= subscribe_to "/users/#{current_user}" %>

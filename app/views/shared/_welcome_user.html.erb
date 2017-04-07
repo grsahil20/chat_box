@@ -2,7 +2,7 @@
 </div>
 
 <div class="col-md-4 welcome_form">
-  <%= form_tag [:sessions, :create], role: 'form', class: 'form-horizontal', method: :post do |f|%>
+  <%= form_tag [:sessions, :create], role: 'form', class: 'form-horizontal', method: :post, remote: true do |f|%>
   <div class="form-group">
     <div class="input-group">
       <%= text_field_tag :user_name, nil, placeholder: 'What is ur name', class: 'form-control', required: true%>

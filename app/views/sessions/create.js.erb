@@ -1,0 +1,5 @@
+<% publish_to "/users/new" do %>
+  $('.chat_users ul').append("<%= j render 'shared/chat_user', online_user: current_user %>")
+<% end %>
+
+location.reload();
