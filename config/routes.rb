@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   post 'chats/create'
+  get 'chats/new'
 
   post 'sessions/create'
 

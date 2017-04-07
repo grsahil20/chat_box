@@ -1,4 +1,5 @@
 class ChatsController < ApplicationController
+
   def create
     respond_to do |format|
       format.js do
@@ -16,4 +17,14 @@ class ChatsController < ApplicationController
       end
     end
   end
+
+  def new
+    respond_to do |format|
+      format.html{ redirect_to root_path }
+      format.js do
+        @invitee = params[:user]
+      end
+    end
+  end
+
 end
