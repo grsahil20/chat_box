@@ -13,21 +13,20 @@ module UserDialect
     attr_accessor :converted_message
 
     def initialize(user_name:, dialect:, message: )
-      p dialect
       @user_name = user_name
       @dialect   = (dialect || UserDialect::StorageService.get_user_dialect(current_user)).gsub(' ', '_').downcase
       @message   = message
     end
 
     def run
-      create_link
-      return convert_message
+      conversion_link
+      convert_message
     end
 
     private
 
-    def create_link
-      @link = UserDialect::ConverterService::BASE_URL + link_params.to_param
+    def conversion_link
+      @link ||= UserDialect::ConverterService::BASE_URL + link_params.to_param
     end
 
     def link_params
@@ -38,7 +37,7 @@ module UserDialect
     end
 
     def convert_message
-      @converted_message ||= Nokogiri::HTML(open @link).css('body table p').first.content.strip
+      @converted_message ||= Nokogiri::HTML(open conversion_link).css('body table p').first.content.strip
     end
   end
 end
