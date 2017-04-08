@@ -1,4 +1,4 @@
-# Resume Maker
+# Chat Box
 
 Chat box is a app to chat in a common room, within strangers.
 
