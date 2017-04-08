@@ -12,8 +12,18 @@
   border-color: #d6e9c6;
 }
 
-.dialect_flag{
-  float: right;
-  margin-right: 10px;
-  color: teal;
+
+.chat_notification{
+  list-style-type: none;
+  text-align: center;
 }
+
+.chat_notification, .chat_message, .chat_message_inverse{
+  span{
+    border: 2px solid #3ca59b;
+    color: #3ca59b;
+    padding: 5px;
+    border-radius: 14px;
+  }
+}
+

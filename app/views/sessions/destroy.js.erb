@@ -1,0 +1,8 @@
+<% publish_to "/users/new" do %>
+  $('.chat_users ul #<%= @user %>').remove();
+  if(current_user.name != '<%= current_user %>'){
+    $('.chat_messages ul').append("<%= j render 'shared/left_room', online_user: @user %>")
+  }
+<% end %>
+
+location.reload();

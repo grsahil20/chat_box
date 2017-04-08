@@ -14,5 +14,12 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    @user = current_user
+    UserDialect::StorageService.remove_user_dialect(current_user)
+    UsersOnline.set_user_offline(current_user)
+    session[:user] = nil
+    respond_to do |format|
+      format.js
+    end
   end
 end

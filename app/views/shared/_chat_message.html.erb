@@ -1,7 +1,7 @@
-<li>
+<li class='chat_message'>
     <span  style="color:red"><%= user %></span>  :
     <span  style="color:green"><%= message %></span>  :
-    <span  style="color:blue"><%= time %></span>
+    <span  style="color:blue"><%= time.strftime("%m/%d/%Y %I:%M%p") %></span>
 
     <span class="dialect_flag"><%= current_dialect %></span>
 </li>

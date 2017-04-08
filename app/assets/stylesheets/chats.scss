@@ -1,4 +1,14 @@
 .chat_area{
-    margin: 13px auto;
+  margin: 13px auto;
 }
 
+.chat_messages ul li{
+  margin-top: 20px;
+  clear: both;
+}
+
+.dialect_flag{
+  float: right;
+  margin-right: 10px;
+  color: teal;
+}

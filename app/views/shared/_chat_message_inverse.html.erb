@@ -1,6 +1,6 @@
-<li>
-    <span  style="color:blue"><%= time %></span> :
-    <span  style="color:green"><%= message %></span>  :
-    <span  style="color:red;"><%= user %></span>
-    <span class="dialect_flag"><%= current_dialect %></span>
+<li class="chat_message_inverse">
+  <span  style="color:blue"><%= time.strftime("%m/%d/%Y %I:%M%p") %></span> :
+  <span  style="color:green"><%= message %></span>  :
+  <span  style="color:red;"><%= user %></span>
+  <span class="dialect_flag"><%= current_dialect %></span>
 </li>

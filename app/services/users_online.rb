@@ -5,7 +5,6 @@ module UsersOnline
     else
       []
     end
-
   end
 
   def self.set_user_online(user_name)
